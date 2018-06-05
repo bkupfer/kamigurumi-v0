@@ -6097,6 +6097,14 @@ button.bg-light:focus {
   background-color: #343a40 !important;
 }
 
+.bg-yellow{
+  background-color: #f4b325 !important;
+}
+
+.bg-yellow-footer{
+  background-color: #dc9d34 !important;
+}
+
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
