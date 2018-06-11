@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block custom_styles %}
+    <link href="{% static 'css/shop-homepage.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
 

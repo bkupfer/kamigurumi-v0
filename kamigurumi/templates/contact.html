@@ -1,11 +1,15 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block custom_styles %}
+    <link href="{% static 'css/shop-homepage.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
 
     <div class="row">
         contacto
             <h3>En construcción</h3>
-
     </div>
 
 {% endblock %}
