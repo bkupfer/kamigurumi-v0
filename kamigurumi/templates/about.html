@@ -1,10 +1,75 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block custom_styles %}
+    <link href="{% static 'css/one-page-wonder.min.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
 
     <div class="row">
-        kamigurumi
-        <h3>En construcción</h3>
+
+        <section>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/Fotos/CABALLOS/Caballo claro Isi/IMG_0897.JPG' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="display-4">Kamigurumi...</h2>
+                            <p>
+                                se dedica a al tejido de amigurumis hechos con la técnica milenaria de crochet japonesa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/Fotos/CABALLOS/Caballo claro Isi/IMG_0897.JPG' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <h2 class="display-4">We salute you!</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/Fotos/CABALLOS/Caballo claro Isi/IMG_0897.JPG' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="display-4">Let there be rock!</h2>
+                            <p>
+                                "Cuando compras algo <b>hecho a mano</b>, estas comprando más que un objeto, estás
+                                comprando horas de experimentos y fracasos, estás comprando días, semanas y
+                                meses de trabajo. No compras una cosa, estas comprando un pedacito del corazón
+                                de otra persona”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </div>
 
