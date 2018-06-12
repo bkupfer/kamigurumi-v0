@@ -1,10 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
+{% load humanize %}
 
-</body>
-</html>
+{% block custom_styles %}
+    <link href="{% static 'css/shop-homepage.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <br>
+            <h1 style="color: #007bff">{{ kamigurumi.name }}</h1>
+            <h3>$ {{ kamigurumi.price|intcomma }} <small>CLP</small></h3>
+            <p>{{ kamigurumi.description }}</p>
+            <p>{{ kamigurumi.size|intcomma }} [cm]</p>
+        </div>
+        <div class="col-md-8">
+            <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    {% for img in kamigurumi.images.all %}
+                        <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></li>
+                    {% endfor %}
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    {% for img in kamigurumi.images.all %}
+                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                            <img class="d-block img-fluid" src="{{ img.image.url }}" alt="First slide">
+                        </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <br>
+
+{% endblock %}
